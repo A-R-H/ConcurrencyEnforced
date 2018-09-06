@@ -160,17 +160,17 @@ class App extends Component {
         </header>
         {this.state.opt && (
           <div>
-            <button onClick={this.handleEdit}>
+            {/* <button onClick={this.handleEdit}>
               {this.state.clickable ? "Submit" : "Edit"}
-            </button>
-            {/* <Button
+            </button> */}
+            <Button
               variant="contained"
               color="primary"
               // className={classes.button}
               onClick={this.handleEdit}
             >
               {this.state.clickable ? "Submit" : "Edit"}
-            </Button> */}
+            </Button>
             {this.state.someoneElseClicking && (
               <div>
                 <p>Stop, someone else is editing this form</p>
@@ -211,7 +211,10 @@ class App extends Component {
                     }}
                   />
                 </div>
-                <span>Current Value: {this.state.location}</span>
+                <span>
+                  {this.state.clickable ? "New Value:" : "Current Value:"}{" "}
+                  {this.state.location}
+                </span>
 
                 <div styles={{ display: "flex" }}>
                   <p className="heads">Grading</p>
@@ -224,7 +227,10 @@ class App extends Component {
                     }}
                   />
                 </div>
-                <span>Current Value: {this.state.grading}</span>
+                <span>
+                  {this.state.clickable ? "New Value:" : "Current Value:"}{" "}
+                  {this.state.grading}
+                </span>
               </div>
             )}
           </div>
@@ -238,7 +244,7 @@ class App extends Component {
               variant="contained"
               color="primary"
               // className={classes.button}
-              onClick={this.handleEdit}
+              onClick={this.handleEdit2}
             >
               {this.state.clickable ? "Submit" : "Edit"}
             </Button>
