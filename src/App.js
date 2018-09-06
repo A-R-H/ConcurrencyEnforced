@@ -181,7 +181,7 @@ class App extends Component {
             </Button>
             {this.state.someoneElseClicking && (
               <div>
-                <p>Stop, someone else is editing this form</p>
+                <p>Someone else is editing this form, please try again later.</p>
               </div>
             )}
             {!this.state.someoneElseClicking && (
@@ -308,14 +308,17 @@ class App extends Component {
         )}
         {this.state.show && (
           <Modal
+          style={{margin: "0 auto", maxHeight: "40vh", maxWidth: "60vh", paddingTop: "100px"}}
             show={this.state.show}
             onClose={this.close}
             closeOnOuterClick={true}
           >
-            <div>
+            <div style={{display: "flex", flexFlow: "column nowrap", maxWidth: "100%", maxHeight: "100%"}}>
+              <p style={{maxHeight: "60%", maxWidth: "100%"}}>
               Someone has edited these details recently, please review those
-              changes before submitting
-              <button onClick={this.toggleModal}>Close</button>
+              changes before submitting.
+                </p>
+              <button style={{border: "2px solid black", borderRadius: "8px", margin: "0 auto", maxHeight: "20", maxWidth: "60%"}} onClick={this.toggleModal}>Close</button>
             </div>
           </Modal>
         )}
@@ -425,7 +428,8 @@ class App extends Component {
   }
   toggleModal() {
     this.setState({
-      show: !this.state.show
+      show: !this.state.show,
+      gogo: false
     });
   }
 }
