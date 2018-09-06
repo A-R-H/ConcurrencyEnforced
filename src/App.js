@@ -133,6 +133,10 @@ class App extends Component {
               <Button
                 variant="outlined"
                 color="primary"
+                style={{
+                  backgroundColor: this.state.opt === true ? "#303f9f" : "white",
+                color: this.state.opt === false ? "#303f9f" : "white"}
+                }
                 // className={classes.button}
                 onClick={() => this.handleClick("opt")}
               >
@@ -141,6 +145,10 @@ class App extends Component {
               <Button
                 variant="outlined"
                 color="primary"
+                style={{
+                  backgroundColor: this.state.opt === true ? "white" : "#303f9f",
+                  color: this.state.opt === true ? "#303f9f" : "white"}
+                }
                 // className={classes.button}
                 onClick={() => this.handleClick("pess")}
               >
@@ -153,7 +161,7 @@ class App extends Component {
                   color: "black"
                 }}
               >
-                {this.state.opt ? "Pessimistic" : "Optimistic"}
+                {/* {this.state.opt ? "Pessimistic" : "Optimistic"} */}
               </h1>
             </div>
           </div>
