@@ -8,15 +8,14 @@
 }
 
 .App-header {
-  background-color: palegoldenrod;
+  /* background-color: palegoldenrod; */
   height: 150px;
   padding: 20px;
   color: white;
 }
 
-
 body {
-  background-color: lightseagreen;
+  /* background-color: lightseagreen; */
 }
 
 .App-title {
@@ -45,5 +44,11 @@ body {
 }
 
 .optionbut:hover {
-background-color: hotpink;
+  background-color: hotpink;
+}
+
+.input-field {
+  border-radius: 10px;
+  border-width: 2px;
+  margin-bottom: 12px;
 }
