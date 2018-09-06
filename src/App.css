@@ -1,0 +1,49 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: palegoldenrod;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+
+body {
+  background-color: lightseagreen;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.heads {
+  text-decoration: underline;
+}
+
+.hbox {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.optionbut {
+  border-radius: 15px;
+  background-color: transparent;
+  border: hotpink 3px solid;
+  margin: 0 auto;
+  max-width: 40vh;
+}
+
+.optionbut:hover {
+background-color: hotpink;
+}
