@@ -17,10 +17,10 @@ class App extends Component {
       someoneElseClicking: false,
       someoneElseClicking2: false,
       name: "Honest John's",
-      location: "Exchange Quay",
+      location: "Clippers Quay",
       grading: "Single site independent",
       name2: "Honest John's",
-      location2: "Exchange Quay",
+      location2: "Clippers Quay",
       grading2: "Single site independent"
     };
     this.handleClick = this.handleClick.bind(this);
@@ -226,19 +226,30 @@ class App extends Component {
 
                 <div styles={{ display: "flex" }}>
                   <p className="heads">Grading</p>
-                  <input
+                  {/* <input
                     className="input-field"
                     disabled={!this.state.clickable}
                     ref={this.inpRef3}
                     onChange={e => {
                       this.handleInput(e, "grading");
                     }}
-                  />
+                  /> */}
+                  <select disabled={!this.state.clickable} value={this.state.grading}  ref={this.inpRef3}
+                    onChange={e => {
+                      this.handleInput(e, "grading");
+                    }}>
+  <option value="Single site independent">Single site independent</option>
+  <option value="Part of multi-site independent">Part of multi-site independent</option>
+  <option value="Car supermarket independent">Car supermarket independent</option>
+  <option value="Franchised single owner">Franchised single owner</option>
+  <option value="Franchised group">Franchised group</option>
+  <option value="Brand-owned site">Brand-owned site</option>
+</select>
                 </div>
-                <span>
+                {/* <span>
                   {this.state.clickable ? "New Value:" : "Current Value:"}{" "}
                   {this.state.grading}
-                </span>
+                </span> */}
               </div>
             )}
           </div>
@@ -288,19 +299,30 @@ class App extends Component {
             </span>
             <p className="heads">Grading</p>
             <div styles={{ display: "flex" }}>
-              <input
+              {/* <input
                 className="input-field"
                 disabled={!this.state.clickable}
                 ref={this.inpRef32}
                 onChange={e => {
                   this.handleInput2(e, "grading2");
                 }}
-              />
+              /> */}
+              <select disabled={!this.state.clickable} value={this.state.grading2}  ref={this.inpRef32}
+                    onChange={e => {
+                      this.handleInput2(e, "grading2");
+                    }}>
+  <option value="Single site independent">Single site independent</option>
+  <option value="Part of multi-site independent">Part of multi-site independent</option>
+  <option value="Car supermarket independent">Car supermarket independent</option>
+  <option value="Franchised single owner">Franchised single owner</option>
+  <option value="Franchised group">Franchised group</option>
+  <option value="Brand-owned site">Brand-owned site</option>
+</select>
             </div>
-            <span>
+            {/* <span>
               {this.state.clickable ? "New Value:" : "Current Value:"}{" "}
               {this.state.grading2}
-            </span>
+            </span> */}
             {this.state.someoneElseClicking2 && (
               <h1>Warning, someone else is currently editing.</h1>
             )}
@@ -360,7 +382,7 @@ class App extends Component {
     if (this.state.gogo) {
       let { name23, location23, grading23 } = this.state;
       if (!name23) name23 = "Honest John's";
-      if (!location23) location23 = "Exchange Quay";
+      if (!location23) location23 = "Clippers Quay";
       if (!grading23) grading23 = "Single site independent";
       this.setState({
         name2: name23,
